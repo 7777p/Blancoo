@@ -1,0 +1,173 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 20px;
+    background-color: #000;
+    position: fixed;
+    width: 98%; 
+}
+
+.logo-email {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.menu-toggle {
+    font-size: 25px;
+    color: #fff;
+    display: none;
+    cursor: pointer;
+}
+
+.nav {
+    display: flex;
+    align-items: center; 
+    gap: 20px;
+}
+
+.nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header .email {
+    color: #fff;
+}
+
+.purchase-template {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #fb6335;
+    border-radius: 5px;
+    display: flex;
+    align-items: center; 
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    background-color: #fb6335;
+    min-height: calc(100vh - 60px);
+    /* padding-top: 80px; */
+}
+
+.hero {
+    padding: 20px;
+    color: #0e0e0e;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.hero .buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.hero .buttons a {
+    padding: 10px 20px;
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.hero .buttons a.purchase {
+    background-color: #000;
+}
+
+.hero .buttons a.other {
+    background-color: #fff;
+    color: #000;
+}
+
+.side-image {
+    flex: 0 0 40%;
+    background-color: #fb6335;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* padding: 20px; */
+}
+
+.side-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    .nav {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #000;
+        padding: 20px 0;
+    }
+
+    .nav.active {
+        display: flex;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    .side-image {
+        display: none;
+    }
+
+    .email {
+        display: none;
+    }
+
+    .purchase-template {
+        background-color: #fb6335;
+    }
+}
+
+@media (min-width: 769px) {
+    .purchase-template {
+        background-color: #fb6335;
+    }
+}
