@@ -64,7 +64,6 @@ main {
     flex-direction: row;
     background-color: #fb6335;
     min-height: calc(100vh - 60px);
-    /* padding-top: 80px; */
 }
 
 .hero {
@@ -117,7 +116,6 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* padding: 20px; */
 }
 
 .side-image img {
@@ -125,6 +123,76 @@ main {
     height: 100%;
     object-fit: cover;
 }
+.features {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 40px 0;
+    background-color: #fff;
+    flex-wrap: wrap; 
+}
+
+.feature-item {
+    text-align: center;
+    max-width: 200px;
+}
+
+.feature-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px auto;
+    background-color: #fde4df;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}
+
+.feature-item h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.feature-item p {
+    font-size: 14px;
+    color: #555;
+}
+.landing-pages {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.landing-pages h2 {
+    font-size: 28px;
+    margin-bottom: 40px;
+}
+
+.landing-container {
+    display: flex;
+    justify-content: center; 
+    flex-wrap: wrap; 
+    gap: 20px;
+}
+
+.landing-item {
+    width: 200px;
+    text-align: center;
+}
+
+.landing-item img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ddd; 
+    border-radius: 8px; 
+    margin-bottom: 10px;
+}
+
+.landing-item p {
+    font-size: 16px;
+    color: #000;
+}
+
+
 
 @media (max-width: 768px) {
     .menu-toggle {
@@ -164,10 +232,23 @@ main {
     .purchase-template {
         background-color: #fb6335;
     }
-}
+    .features {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+    }
 
-@media (min-width: 769px) {
-    .purchase-template {
-        background-color: #fb6335;
+    .feature-item {
+        margin-bottom: 30px;
+    }
+    .landing-container {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .landing-item {
+        width: 80%; 
+        margin-bottom: 30px; 
     }
 }
+
